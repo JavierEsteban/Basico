@@ -185,6 +185,7 @@ tasa = float(input("Ingrese la tasa de interes ............ "))
 capital = calculo_interes(cantidad, tiempo, tasa)
 print("El vaor del capital es {}".format(capital))
 
+
 '''
 Ejercicio 12
 Una juguetería tiene mucho éxito en dos de sus productos: 
@@ -197,6 +198,45 @@ Escribir un programa que lea el número de payasos y muñecas vendidos
 en el último pedido y calcule el peso total del paquete que será enviado.
 '''
 
+def calcula_peso(n, m):
+    pesos ={'payasos': 112, 'muñecas': 75}
+    pesos_totales = {}
+    pesos_totales['payasos_totales'] = pesos['payasos'] * n
+    pesos_totales['muñecas_totales'] = pesos['muñecas'] * m
+
+    return  pesos_totales
+
+print(" |--------------------------------------------| ")
+print(" |                                            | ")
+print(" |        Programa de Calculo de Pesos        | ")
+print(" |                                            | ")
+print("  -------------------------------------------- ")
+
+bit = 1
+while(bit == True):
+
+    try:
+        if (bit == 1):
+            try:
+                n = float(input("Ingrese la cantidad de payasos a enviar :"))
+                m = float(input("Ingresas la cantidad de muñecas a eniar :"))
+                pesos_totales = calcula_peso(n, m)
+
+                print(""""El peso total es {}, 
+                    el peso de los payasos es {} 
+                    y el pesos de las muñecas{}""".format( pesos_totales['payasos_totales'] + pesos_totales['muñecas_totales'],
+                                                 pesos_totales['payasos_totales'], pesos_totales['muñecas_totales']))
+
+            except:
+                print("Ingrese el valor correcto del peso del payaso o muñeca..")
+                break
+
+
+        elif (bit == 0):
+            break
+        bit = int(input("Ingresa 1 si desea continuar y 0 cuando no."))
+    except:
+        print("Favor de colocar el valor coorecto....")
 
 '''
 Ejercicio 13

@@ -8,6 +8,7 @@ Algoritmo que pida dos números e indique si el primero es mayor que el segundo 
 Numero1 = int(input("Ingrese el Primer Número : "))
 Numero2 = int(input("Ingrese el Primer Número : "))
 
+
 if Numero1 > Numero2 :
     print("El Número {}, es mayor que {}".format(Numero1,Numero2))
 else :
